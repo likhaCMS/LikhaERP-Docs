@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "LikhaERP Docs",
   description: "LikhaERP Docs",
+  outDir: './docs',
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],

@@ -26,6 +26,4 @@ In the module bar, go to the content module. Enter your `authors` collection and
 
 Enter the `posts` collection and create two posts, selecting an author from the Many to One interface.
 
-## Next Steps
 
-Read the full [API Reference](README.md) to learn about all available endpoints and features. Access your new collections via the API.

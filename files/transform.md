@@ -93,3 +93,4 @@ The following options are available:
   - **Additional Transformations**: adds additional transformations using the underlying image processing library.
 
 You can then use this `key` as a parameter when requesting a file to apply the preset.
+

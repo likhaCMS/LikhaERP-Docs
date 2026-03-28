@@ -107,6 +107,4 @@ likha.onWebSocket('error', function (error) {
 });
 ```
 
-## Next Steps
 
-Learn more about [authentication modes](realtime/authentication.md) and [how to manage subscriptions](realtime/subscriptions.md).

@@ -54,6 +54,4 @@ curl \
   	--url 'https://your-domain.com/api/items/posts'
 ```
 
-## Next Steps
 
-All endpoints are documented in the API Reference, which also shows all expected parameters and properties in the payload. Explore the API Reference for detailed documentation on all available endpoints.

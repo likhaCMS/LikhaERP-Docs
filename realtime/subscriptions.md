@@ -192,3 +192,4 @@ client.dispose();
 ```
 
 Calling `dispose` sends a message to the server to unsubscribe from the specified subscription. This will stop receiving any further updates for that subscription.
+

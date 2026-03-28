@@ -58,6 +58,4 @@ curl \
 --url 'https://your-domain.com/api/items/posts'
 ```
 
-## Next Steps
 
-Read more about access tokens, access control, and then refer to the Users API reference to manage user accounts.

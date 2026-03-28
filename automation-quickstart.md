@@ -30,6 +30,4 @@ When finished, save the flow.
 
 Now, when you create a post, the user you entered will be notified.
 
-## Next Steps
 
-Read more about different [triggers](triggers.md) available in flows and how data is passed through a flow with [the data chain](data-chain.md).

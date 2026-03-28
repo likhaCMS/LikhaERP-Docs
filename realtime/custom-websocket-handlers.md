@@ -112,9 +112,4 @@ for (const client of wsService.clients()) {
 
 **Note:** `WebSocketService` only provides access to REST WebSocket clients. GraphQL subscription and logs streaming clients are managed by separate controllers and are not accessible through this service.
 
-## Next Steps
 
-- [Hooks reference](/guides/extensions/api-extensions/hooks) - full list of filter and action events
-- [Extensions quickstart](/guides/extensions/overview) - set up your first extension
-- [Realtime configuration](/configuration/realtime) - WebSocket environment variables
-- [Subscriptions](/guides/realtime/subscriptions) and [Actions](/guides/realtime/actions) - client-side WebSocket usage

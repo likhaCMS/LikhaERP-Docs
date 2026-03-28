@@ -56,8 +56,4 @@ connection.addEventListener('message', (message) => {
 });
 ```
 
-## Next Steps
 
-- [Custom WebSocket Handlers](custom-websocket-handlers.md) - Learn to build server-side extensions
-- [Query Parameters](query-parameters.md) - Customize your queries with filters, fields, and more
-- [Extensions Guide](/guides/extensions/overview) - Build custom functionality for Likha ERP

@@ -12,8 +12,4 @@ Learn to upload, access, and transform files in your Likha ERP instance. Multipl
 
 Files are stored in the files module and can be managed through both the Data Studio interface and the API. Uploaded files are immediately available via a consistent URL pattern, and image files can be transformed on-the-fly using query parameters.
 
-## Next Steps
 
-- [Upload Files](upload.md) - Learn how to upload files
-- [Access Files](access.md) - Understand file access and permissions
-- [Transform Files](transform.md) - Master image transformations

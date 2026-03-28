@@ -119,3 +119,4 @@ const client = createClient({
 ```
 
 When a token expires, the connection will be closed with a `Forbidden` message, signaling to the client to refresh their `access_token` and reconnect.
+

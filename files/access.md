@@ -45,3 +45,4 @@ This optional filename is also used in the `Content-Disposition` header when the
 To download an asset with the correct filename, you need to add the `?download` query parameter to the request and the `download` attribute to your anchor tag. This will ensure the appropriate `Content-Disposition` headers are added. Without this, the download will work on the same domain, however it will have the file's "id" as the filename for cross-origin requests.
 
 Fetching transformed assets is done by adding a `key` query parameter to the original file's URL. In the management interface, you can configure different asset presets that control the output of any given image. If a requested transformed asset doesn't yet exist, it is dynamically generated and immediately returned.
+

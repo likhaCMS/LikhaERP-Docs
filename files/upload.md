@@ -54,3 +54,4 @@ The response will include the created file items with their IDs and metadata.
 In the files module, click the upload button and select the URL import option to import a file via URL.
 
 Use the file URL and it will be uploaded to your asset storage.
+

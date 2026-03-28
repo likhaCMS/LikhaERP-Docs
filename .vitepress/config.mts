@@ -10,6 +10,9 @@ export default defineConfig({
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    search: {
+      provider: 'local'
+    },
     logo: {
       src: '/logo.png',
       alt: 'Likha ERP',
@@ -35,62 +38,7 @@ export default defineConfig({
           { text: 'Query Parameters', link: '/query-parameters' }
         ]
       },
-      {
-        text: 'Authentication',
-        items: [
-          { text: 'Overview', link: '/auth/' },
-          { text: 'Login', link: '/auth/login' },
-          { text: 'Logout', link: '/auth/logout' },
-          { text: 'Password Reset', link: '/auth/password-reset' },
-          { text: 'Refresh Token', link: '/auth/refresh' },
-          { text: 'OAuth', link: '/auth/oauth' },
-          { text: 'OAuth Provider', link: '/auth/oauth-provider' },
-          { text: 'Password Request', link: '/auth/password-request' }
-        ]
-      },
-      {
-        text: 'Automation',
-        items: [
-          { text: 'Overview', link: '/automation/' },
-          { text: 'Triggers', link: '/automation/triggers' },
-          { text: 'Flows', link: '/automation/flows' },
-          { text: 'Operations', link: '/automation/operations' },
-          { text: 'Data Chain', link: '/automation/data-chain' }
-        ]
-      },
-      {
-        text: 'Files',
-        items: [
-          { text: 'Overview', link: '/files/' },
-          { text: 'Upload', link: '/files/upload' },
-          { text: 'Access', link: '/files/access' },
-          { text: 'Transform', link: '/files/transform' }
-        ]
-      },
-      {
-        text: 'Items',
-        items: [
-          { text: 'List', link: '/items/list' },
-          { text: 'Get', link: '/items/get' },
-          { text: 'Create', link: '/items/create' },
-          { text: 'Update', link: '/items/update' },
-          { text: 'Delete', link: '/items/delete' },
-          { text: 'Singleton', link: '/items/singleton' },
-          { text: 'Create Multiple', link: '/items/create-multiple' },
-          { text: 'Update Multiple', link: '/items/update-multiple' },
-          { text: 'Delete Multiple', link: '/items/delete-multiple' }
-        ]
-      },
-      {
-        text: 'Realtime',
-        items: [
-          { text: 'Overview', link: '/realtime/' },
-          { text: 'Subscriptions', link: '/realtime/subscriptions' },
-          { text: 'Actions', link: '/realtime/actions' },
-          { text: 'Authentication', link: '/realtime/authentication' },
-          { text: 'Custom WebSocket Handlers', link: '/realtime/custom-websocket-handlers' }
-        ]
-      }
+      { text: 'Guide', link: '/README' }
     ],
 
     sidebar: [

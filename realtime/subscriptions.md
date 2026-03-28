@@ -66,7 +66,7 @@ If you only want to return specific fields on subscription events, add the `quer
 }
 ```
 
-Refer to the [Query Parameters](query-parameters.md) documentation for more information on specifying what data should be returned.
+Refer to the [Query Parameters](/query-parameters) documentation for more information on specifying what data should be returned.
 
 ### Using UIDs
 

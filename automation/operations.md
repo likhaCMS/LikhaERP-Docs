@@ -8,7 +8,7 @@ A condition operation lets you choose a success path or failure path by validati
 
 ### Options
 
-- **Condition Rules** — Create conditions with filter rules. See [Filter Rules](filters.md) for complete syntax.
+- **Condition Rules** — Create conditions with filter rules. See [Filter Rules](/filters) for complete syntax.
 
 ### Payload
 
@@ -102,7 +102,7 @@ This operation reads items from a collection and adds them onto the data chain. 
 - **Permissions** — Set the scope of permissions used for this operation.
 - **Collections** — Select the collection you'd like to read items from.
 - **IDs** — Input the ID for items you wish to read and press enter. Click the ID to remove.
-- **Query** — Select the items with a query. To learn more, see [Filter Rules](filters.md).
+- **Query** — Select the items with a query. To learn more, see [Filter Rules](/filters).
 - **Emit Events** — Toggle whether the event is emitted.
 
 ### Payload
@@ -124,7 +124,7 @@ This operation updates item(s) in a collection. You may select item(s) to update
   - Single object with keys and data, to update multiple items to the same values.
   - Array of objects with data including primary keys, to update multiple items to different values.
   - To learn more, see the Items API reference.
-- **Query** — Select items to update with a query. To learn more, see [Filter Rules](filters.md).
+- **Query** — Select items to update with a query. To learn more, see [Filter Rules](/filters).
 
 ### Payload
 
@@ -142,7 +142,7 @@ This operation deletes item(s) from a collection.
 - **Permissions** — Set the scope of permissions used for this operation.
 - **Emit Events** — Toggle whether the event is emitted.
 - **IDs** — Set Item IDs and press enter to confirm. Click the ID to remove.
-- **Query** — Select items to delete with a query. To learn more, see [Filter Rules](filters.md).
+- **Query** — Select items to delete with a query. To learn more, see [Filter Rules](/filters).
 
 ### Payload
 

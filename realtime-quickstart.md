@@ -12,9 +12,9 @@ You will need a Likha ERP instance.
 
 Create a `messages` collection with a `date_created` field enabled on collection creation. Add `text` and `user` text fields. Follow the [data modeling quickstart](data-model-setup.md) to learn more.
 
-Add an [access policy](/guides/auth/access-control) called **Public Posts** to your user in the Data Studio. Within it, create a new permission to allow the `read` and `create` actions on the `messages` collection.
+Add an access policy called **Public Posts** to your user in the Data Studio. See the [Authentication](/auth/) guide for help. Within it, create a new permission to allow the `read` and `create` actions on the `messages` collection.
 
-In the Data Studio, create a [static token](/guides/auth/tokens-cookies) for your user, copy it, and save your user profile.
+In the Data Studio, create a static token for your user (see the [Authentication](/auth/) guide), copy it, and save your user profile.
 
 ## Enable Realtime
 

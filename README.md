@@ -1,6 +1,6 @@
 # Likha ERP Documentation
 
-Welcome to the Likha ERP API documentation. This guide covers all available endpoints for interacting with your Likha ERP instance.
+Welcome to the Likha ERP documentation. This guide covers all available information for interacting with your Likha ERP instance.
 
 ## Getting Started
 

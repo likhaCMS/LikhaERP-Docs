@@ -8,73 +8,64 @@ To set up a computed field:
 
 1. Go to **Settings**, create a new field with type string or number.
 2. In the **Interface** panel, choose **Computed** interface. There are 8 options:
-   1. **Template**: Similar to M2M interface, determine how the field is calculated. Learn more about syntax in the next section.
-   2. **Field Mode**: Choose how the value is displayed.
-       - **null**: Default option. Show an input with the computed value but still allow manual editing.
-       - **Display Only**: Show the computed value but will not save it to the database. Usually used for alias fields.
-       - **Read Only**: Show an input with the computed value and disallow manual editing.
-   3. **Prefix**: a string to prefix the computed value.
-   4. **Suffix**: a string to suffix the computed value.
-   5. **Custom CSS**: a JSON object for inline style binding. Only works with **Display Only** and **Read Only** mode. You can use this option to customize the appearance of the computed value such as font size, color, etc. Example: `{"color": "red", "font-size": "20px"}`.
-   6. **Debug Mode**: Used for debugging the template. It will show an error message if the template is invalid. It will also log to console the result of each component of the template.
-   7. **Compute If Empty**: Compute the value if the field is empty. This is useful if you want a value to be computed once such as the created date or a unique ID.
-   8. **Initial Compute**: Compute the value when opening the form. This is useful if you want to compute a value based on the current date or other dynamic values.
+    1. **Template**: Similar to M2M interface, determine how the field is calculated. Learn more about syntax in the next section.
+    2. **Field Mode**: Choose how the value is displayed.
+        - **null**: Default option. Show an input with the computed value but still allow manual editing.
+        - **Display Only**: Show the computed value but will not save it to the database. Usually used for alias fields.
+        - **Read Only**: Show an input with the computed value and disallow manual editing.
+    3. **Prefix**: a string to prefix the computed value.
+    4. **Suffix**: a string to suffix the computed value.
+    5. **Custom CSS**: a JSON object for inline style binding. Only works with **Display Only** and **Read Only** mode. You can use this option to customize the appearance of the computed value such as font size, color, etc. Example: `{"color": "red", "font-size": "20px"}`.
+    6. **Debug Mode**: Used for debugging the template. It will show an error message if the template is invalid. It will also log to console the result of each component of the template.
+    7. **Compute If Empty**: Compute the value if the field is empty. This is useful if you want a value to be computed once such as the created date or a unique ID.
+    8. **Initial Compute**: Compute the value when opening the form. This is useful if you want to compute a value based on the current date or other dynamic values.
 
-## Syntax
+# Syntax
 
 The template consists of 2 elements: **plain strings** & **expressions**.
 - **Plain** strings are string literal, often used for text interpolation.
-- **Expressions** can contains operators, field names, numbers & strings. They must be enclosed by `&#123;&#123;` and `&#125;&#125;`.
+- **Expressions** can contains operators, field names, numbers & strings. They must be enclosed by <code v-pre>{{</code> and <code v-pre>}}</code>.
 
 ## Examples
-
 Sum 2 numbers:
-
 ```
-&#123;&#123; SUM(a, b) &#125;&#125;
+{{ SUM(a, b) }}
 ```
 
 Multiply 2 numbers:
-
 ```
-&#123;&#123; MULTIPLY(a, b) &#125;&#125;
+{{ MULTIPLY(a, b) }}
 ```
 
 Convert string to slug:
-
 ```
-&#123;&#123; SLUG(title) &#125;&#125;
+{{ SLUG(title) }}
 ```
 
 Text interpolation:
-
 ```
-/&#123;&#123; SLUG(title) &#125;&#125;-&#123;&#123; id &#125;&#125;
+{{ SLUG(title) }}-{{ id }}
 ```
 
 Complex calculation:
-
 ```
-&#123;&#123; SUM(MULTIPLY(2, x), b) &#125;&#125;
+{{ SUM(MULTIPLY(2, x), b) }}
 ```
 
 Literal strings are enclosed by double quotes (`"`):
-
 ```
-&#123;&#123; CONCAT(file, ".txt") &#125;&#125;
+{{ CONCAT(file, ".txt") }}
 ```
 
 Use `.` to access nested fields in M2O or M2M fields:
-
 ```
-&#123;&#123; CONCAT(CONCAT(user.first_name, " "), user.last_name) &#125;&#125;
+{{ CONCAT(CONCAT(user.first_name, " "), user.last_name) }}
 ```
 
 Combine `AT`, `FIRST`, `LAST`, `JSON_GET` to access nested fields in O2M or JSON fields:
-
 ```
-&#123;&#123; JSON_GET(AT(products, 0), "name") &#125;&#125;
-&#123;&#123; JSON_GET(LAST(products), "price") &#125;&#125;
+{{ JSON_GET(AT(products, 0), "name") }}
+{{ JSON_GET(LAST(products), "price") }}
 ```
 
 **Note**: For M2O, O2M, M2M fields, you can only access the fields of the direct relation. For example, if you have a `user` field that is a M2O relation to the `users` collection, you can only access the fields of the `users` collection. You cannot access the fields of the `roles` collection even though the `users` collection has a M2O relation to the `roles` collection. On the other hand, JSON fields have no such limitation!
@@ -94,8 +85,8 @@ Operator | Description
 
 Operator | Description
 --- | ---
-`SLUG(a)` | transform string to slug (e.g. "This is a title" → "this-is-a-title")
-`CURRENCY(a)` | format number to currency (e.g. 3000 → "3,000")
+`SLUG(a)` | transform string to slug (e.g. "This is a title" &#8594; "this-is-a-title")
+`CURRENCY(a)` | format number to currency (e.g. 3000 &#8594; "3,000")
 
 ### Date
 
@@ -113,7 +104,7 @@ Operator | Description
 `MINUTES(a)` | get minutes of a date object, similar to `getMinutes`
 `SECONDS(a)` | get seconds of a date object, similar to `getSeconds`
 `TIME(a)` | get time of a date object, similar to `getTime`
-`LOCALE_STR(a, locale, options)` | transform date or date-like object to string with locale format, `options` is a stringified JSON object. Example: `LOCALE_STR("2023-01-01", "en-US", "&#123;\"weekday\": \"long\", \"year\": \"numeric\", \"month\": \"long\", \"day\": \"numeric\"&#125;")` returns "Sunday, January 1, 2023".
+`LOCALE_STR(a, locale, options)` | transform date or date-like object to string with locale format, `options` is a stringified JSON object. Example: `LOCALE_STR("2023-01-01", "en-US", "{\"weekday\": \"long\", \"year\": \"numeric\", \"month\": \"long\", \"day\": \"numeric\"}")` returns "Sunday, January 1, 2023".
 
 ### Arithmetic
 
@@ -239,5 +230,6 @@ Operator | Description
 ## Dynamic Variables
 
 There are 2 dynamic variables available that you can use in the expressions:
-- `$NOW`: return the current Date object. Example: `&#123;&#123; YEAR($NOW) &#125;&#125;` returns the current year.
-- `$CURRENT_USER`: return the current user's id. Example: `&#123;&#123; EQUAL($CURRENT_USER, user) &#125;&#125;` checks if the `user` field is the current user.
+- `$NOW`: return the current Date object. Example: <code v-pre>{{ YEAR($NOW) }}</code> returns the current year.
+- `$CURRENT_USER`: return the current user's id. Example: <code v-pre>{{ EQUAL($CURRENT_USER, user) }}</code> checks if the `user` field is the current user.
+

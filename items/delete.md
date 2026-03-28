@@ -30,7 +30,7 @@ The specified collection or item does not exist.
 ## Example Request
 
 ```http
-DELETE /api/items/articles/1 HTTP/1.1
+DELETE /items/articles/1 HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```

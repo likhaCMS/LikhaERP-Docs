@@ -52,7 +52,7 @@ The specified collection or item does not exist.
 ## Example Request
 
 ```http
-GET /api/items/articles/1?fields=id,title,content,status HTTP/1.1
+GET /items/articles/1?fields=id,title,content,status HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```

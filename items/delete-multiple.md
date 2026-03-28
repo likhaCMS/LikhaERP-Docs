@@ -73,7 +73,7 @@ The specified collection does not exist.
 ## Example Request
 
 ```http
-DELETE /api/items/articles HTTP/1.1
+DELETE /items/articles HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Content-Type: application/json
@@ -84,7 +84,7 @@ Content-Type: application/json
 or
 
 ```http
-DELETE /api/items/articles?filter={"status":"draft"} HTTP/1.1
+DELETE /items/articles?filter={"status":"draft"} HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```

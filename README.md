@@ -55,7 +55,7 @@ Welcome to the Likha ERP documentation. This guide covers all available informat
 All API requests should be made to:
 
 ```
-https://your-domain.com/api
+https://your-domain.com
 ```
 
 ## Authentication
@@ -105,7 +105,7 @@ All API requests are made using standard HTTP methods and JSON.
 **List items:**
 
 ```http
-GET /api/items/articles?limit=10 HTTP/1.1
+GET /items/articles?limit=10 HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```
@@ -113,7 +113,7 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 **Create item:**
 
 ```http
-POST /api/items/articles HTTP/1.1
+POST /items/articles HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Content-Type: application/json
@@ -126,7 +126,7 @@ Content-Type: application/json
 **Get single item:**
 
 ```http
-GET /api/items/articles/1 HTTP/1.1
+GET /items/articles/1 HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```
@@ -134,7 +134,7 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 **Update item:**
 
 ```http
-PATCH /api/items/articles/1 HTTP/1.1
+PATCH /items/articles/1 HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Content-Type: application/json
@@ -147,7 +147,7 @@ Content-Type: application/json
 **Delete item:**
 
 ```http
-DELETE /api/items/articles/1 HTTP/1.1
+DELETE /items/articles/1 HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```

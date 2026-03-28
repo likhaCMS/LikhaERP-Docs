@@ -55,7 +55,7 @@ Include the access token in the Authorization header when making requests. If yo
 ```bash
 curl \
 --header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
---url 'https://your-domain.com/api/items/posts'
+--url 'https://your-domain.com/items/posts'
 ```
 
 

@@ -59,7 +59,7 @@ The specified collection does not exist.
 ## Example Request
 
 ```http
-GET /api/items/articles?fields=id,title,status&limit=20&sort=-date_created&filter={"status":"published"} HTTP/1.1
+GET /items/articles?fields=id,title,status&limit=20&sort=-date_created&filter={"status":"published"} HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```

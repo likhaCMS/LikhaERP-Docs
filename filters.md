@@ -354,7 +354,7 @@ This filters the `countries` collection by following the relation to `cities` th
 When making API requests, filters are passed as a query parameter:
 
 ```http
-GET /api/items/articles?filter={"status":{"_eq":"published"}} HTTP/1.1
+GET /items/articles?filter={"status":{"_eq":"published"}} HTTP/1.1
 ```
 
 ---

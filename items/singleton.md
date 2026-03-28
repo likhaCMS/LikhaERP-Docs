@@ -40,7 +40,7 @@ Retrieve the singleton item from a collection.
 ### Example Request
 
 ```http
-GET /api/items/site_settings/singleton HTTP/1.1
+GET /items/site_settings/singleton HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```
@@ -95,7 +95,7 @@ Update the singleton item.
 ### Example Request
 
 ```http
-PATCH /api/items/site_settings/singleton HTTP/1.1
+PATCH /items/site_settings/singleton HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Content-Type: application/json

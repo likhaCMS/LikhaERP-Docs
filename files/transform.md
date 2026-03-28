@@ -35,7 +35,7 @@ Other transformation parameters include `height`, `quality`, `format`, and more.
 **Example Request:**
 
 ```http
-GET /api/assets/c984b755-e201-497e-b0a7-24156ad9c7e0
+GET /assets/c984b755-e201-497e-b0a7-24156ad9c7e0
 	?width=300
 	&height=300
 	&quality=50
@@ -58,7 +58,7 @@ The system provides access to advanced image transformations using a `transforms
 **Example Request:**
 
 ```http
-GET /api/assets/c984b755-e201-497e-b0a7-24156ad9c7e0
+GET /assets/c984b755-e201-497e-b0a7-24156ad9c7e0
 	?transforms=[["rotate", 90],["blur", 10],["tint", "rgb(255, 0, 255)"], ["negate", {"lower": 10, "upper": 50}]]
 ```
 
@@ -67,7 +67,7 @@ Custom and advanced transformations can also be used in conjunction.
 **Example Request (combined):**
 
 ```http
-GET /api/assets/c984b755-e201-497e-b0a7-24156ad9c7e0
+GET /assets/c984b755-e201-497e-b0a7-24156ad9c7e0
 	?transforms=[["flip"]]
 	&fit=cover
 	&width=300

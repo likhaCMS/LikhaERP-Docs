@@ -25,7 +25,7 @@ Multiple files can be uploaded via the API using a `multipart/form-data` request
 **Example Request:**
 
 ```http
-POST /api/files HTTP/1.1
+POST /files HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Content-Type: multipart/form-data; boundary=----boundary

@@ -17,7 +17,7 @@ Open your terminal and run the following command to read items from the `posts` 
 ```bash
 curl \
 --header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
---url 'https://your-domain.com/api/items/posts'
+--url 'https://your-domain.com/items/posts'
 ```
 
 **Replace values:**
@@ -34,7 +34,7 @@ You can use any of the global query parameters to change the data that is return
 ```bash
 curl \
   --header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
-  --url 'https://your-domain.com/api/items/posts?filter[status][_eq]=published&fields=id,title'
+  --url 'https://your-domain.com/items/posts?filter[status][_eq]=published&fields=id,title'
 ```
 
 This request will only show items with a `status` value of `published`, and only return the `id` and `title` fields.
@@ -43,7 +43,7 @@ See all available query parameters in the Query Parameters guide.
 
 ## Creating Data
 
-All collections are given consistent endpoints. By sending a POST request to `/api/items/posts` with an object containing properties in the collection, a new item will be created.
+All collections are given consistent endpoints. By sending a POST request to `/items/posts` with an object containing properties in the collection, a new item will be created.
 
 ```bash
 curl \
@@ -51,7 +51,7 @@ curl \
 	--header 'Authorization: Bearer YOUR_ACCESS_TOKEN' \
 	--header 'Content-Type: application/json' \
 	--data '{ "title": "Hello Universe!" }' \
-  	--url 'https://your-domain.com/api/items/posts'
+  	--url 'https://your-domain.com/items/posts'
 ```
 
 

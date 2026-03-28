@@ -61,7 +61,7 @@ The specified collection or item does not exist.
 ## Example Request
 
 ```http
-PATCH /api/items/articles/1 HTTP/1.1
+PATCH /items/articles/1 HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Content-Type: application/json

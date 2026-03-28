@@ -64,7 +64,7 @@ The specified collection does not exist.
 ## Example Request
 
 ```http
-POST /api/items/articles HTTP/1.1
+POST /items/articles HTTP/1.1
 Host: your-domain.com
 Authorization: Bearer YOUR_ACCESS_TOKEN
 Content-Type: application/json

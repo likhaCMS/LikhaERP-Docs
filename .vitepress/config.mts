@@ -26,11 +26,12 @@ export default defineConfig({
         ]
       },
       {
-        text: 'API Reference',
+        text: 'Core Concepts',
         items: [
+          { text: 'Data Model Setup', link: '/data-model-setup' },
+          { text: 'Computed Fields', link: '/computed-fields' },
           { text: 'Filters', link: '/filters' },
-          { text: 'Query Parameters', link: '/query-parameters' },
-          { text: 'Data Model Setup', link: '/data-model-setup' }
+          { text: 'Query Parameters', link: '/query-parameters' }
         ]
       },
       {
@@ -103,11 +104,12 @@ export default defineConfig({
         ]
       },
       {
-        text: 'API Reference',
+        text: 'Core Concepts',
         items: [
+          { text: 'Data Model Setup', link: '/data-model-setup' },
+          { text: 'Computed Fields', link: '/computed-fields' },
           { text: 'Filters', link: '/filters' },
-          { text: 'Query Parameters', link: '/query-parameters' },
-          { text: 'Data Model Setup', link: '/data-model-setup' }
+          { text: 'Query Parameters', link: '/query-parameters' }
         ]
       },
       {

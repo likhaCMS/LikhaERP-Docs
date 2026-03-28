@@ -13,8 +13,10 @@ Welcome to the Likha ERP API documentation. This guide covers all available endp
 ## Table of Contents
 
 ### Core Concepts
+- [Data Model Setup](data-model-setup.md) - Create collections, fields, and relationships
+- [Computed Fields](computed-fields.md) - Automatically calculate field values using templates and expressions
+- [Filters](filters.md) - Filter syntax, operators, and advanced features
 - [Query Parameters](query-parameters.md) - Complete guide to all query parameters
-- [Filter Rules](filters.md) - Filter syntax, operators, and advanced features
 
 ### Authentication API
 - [Login](auth/login.md) - Authenticate as a user

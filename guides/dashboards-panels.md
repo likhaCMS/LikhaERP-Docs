@@ -130,6 +130,14 @@ The choropleth panel colors a geometry/boundary column by a value — the standa
 
 `csv` fields store a JSON-array string (`["youth","seniors"]`), not comma-separated text. Expand in SQL with `jsonb_array_elements_text(col::jsonb)` — `string_to_array(col, ',')` yields broken `["a"]`-style rows.
 
+## Custom Extensions
+
+Panels and flow operations ship as platform extensions:
+
+- **Panels** register a type id with `definePanel({ id: ... })` — that id is what `/panels` rows store in `type`. Folder/display names are unreliable; always read ids from `GET /extensions`.
+- **Operations** — custom operations like `likha_sql` appear in the flow editor's operation picker alongside built-ins.
+- **Deployed bundle** — `GET /extensions/sources/index.js` serves all app extensions concatenated; grep it to verify a deploy actually landed.
+
 ## After Extension Updates
 
-When platform extensions are updated server-side, the served bundle changes — users must hard-refresh (Ctrl/Cmd-Shift-R) to pick up fixes.
+Extension changes ship inside the platform build — they require a redeploy of the backend, not just a restart. Once deployed, users must hard-refresh (Ctrl/Cmd-Shift-R) to pick up the new bundle.

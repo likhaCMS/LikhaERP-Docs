@@ -62,7 +62,7 @@ Read before any API work on a Likha ERP project. Every rule below came from a re
 
 ## Dashboards & panels
 
-- **`GET /extensions?limit=-1`** enumerates all panel/interface types (`schema.type` + `schema.name`). Type ids are NOT inferable from display names — read them here.
+- **`GET /extensions?limit=-1`** enumerates all panel/interface/operation types (`schema.type` + `schema.name`). Type ids are NOT inferable from display names — read them here. Custom ops like `likha_sql` are extensions too. `GET /extensions/sources/index.js` serves the deployed bundle — grep it to verify a deploy landed; extension updates need a backend redeploy + client hard-refresh.
 - **Panel types**: `echarts-panel`, `likhaHeatmap-panel`, `choropleth-map-panel`, `table-view-panel`, `calendar-panel`, `likhaButtonLink-panel`, `flow-triggers-panel`.
 - **`echarts-panel`** options: `{flow:{key:<flow-uuid>, collection:"system_flows"}}`. Panel GETs `/flows/trigger/{id}`; last op must return a plain ECharts option (no functions). Recipe: webhook trigger, `accountability:"all"`, `error_on_reject:true`; ops `likha_sql` → Run Script returning the option.
 - **Metric panel**: `{collection, field:"id", function:count|sum|avg|min|max, filter:{...}, sortField:null}` — `$NOW` works in filters. Pre-verify with `/items/{col}?aggregate[count]=id`.

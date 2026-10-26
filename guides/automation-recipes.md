@@ -59,7 +59,7 @@ Webhook-triggered flows are invoked with **GET** `/flows/trigger/{id}` — a POS
 
 ## The SQL Query Operation
 
-The `likha_sql` operation runs raw SQL server-side — multi-statement is fine. It is the sanctioned way to change things the REST layer cannot: relation internals such as `junction_field` and `one_deselect_action`, foreign-key cascade rules, and bulk fixes.
+`likha_sql` is a **custom operation** shipped with the platform — it appears in the flow editor alongside the built-in operations and is enumerable via `GET /extensions?limit=-1`. It runs raw SQL server-side — multi-statement is fine — and is the sanctioned way to change things the REST layer cannot: relation internals such as `junction_field` and `one_deselect_action`, foreign-key cascade rules, and bulk fixes.
 
 Options: `{ "sql": "...", "binding": [] }`. It returns:
 

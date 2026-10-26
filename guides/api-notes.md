@@ -48,11 +48,19 @@ A field marked `readonly` in the interface still accepts explicit values over th
 
 `/panels`, `/dashboards`, `/flows`, and `/operations` happily create duplicates on repeat POSTs. Always GET-filter by name (and by dashboard, for panels) before creating. Build a chain tail-first: POST operations, then PATCH `flow.operation` to the first operation's id.
 
-## Prefer Recreating Relations Over Updating Them
+## Never PATCH Relations — It Can Take the Server Down
 
-Treat relations as create-once. Modifying relation properties after creation — for example, changing `one_deselect_action` — is fragile and can fail on some deployments. Instead:
+`PATCH /relations/{collection}/{field}` can crash the server process outright on affected versions — a bug in the schema-mutation path exits the process mid-request. This applies to **any** relation PATCH, even a correct, verified payload. `POST /relations` is safe.
 
-1. Recreate the relation with the desired options, or
+**If your instance went down after a relation PATCH:**
+
+- **Dev server (nodemon)** — it does *not* auto-restart; type `rs` + Enter in its console.
+- **Docker** — `docker compose restart` (or `up -d`) the backend container.
+- **Hosted** — the platform restarts the process automatically; allow a moment and retry, or contact support if it persists.
+
+**To change relation behavior safely, never PATCH — do one of these instead:**
+
+1. Delete and recreate the relation with the desired options, or
 2. Apply the change at the database level through the [SQL Query operation](/guides/automation-recipes#the-sql-query-operation) and then clear the system schema cache:
 
 ```bash

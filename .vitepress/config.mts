@@ -5,7 +5,7 @@ export default defineConfig({
   title: "LikhaERP Docs",
   description: "LikhaERP Docs",
   outDir: './docs',
-  srcExclude: ['public/**/*.md'],
+  srcExclude: ['public/**/*.md', 'docs/**/*.md'],
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],

@@ -22,7 +22,7 @@ Read before any API work on a Likha ERP project. Every rule below came from a re
 - **Readonly is a UI concept** — readonly fields accept explicit values via API (backdating seeds/migrations).
 - **Creating at final status skips `items.update` flows** — set derived fields (timestamps, warranties, totals) explicitly in the create payload.
 - **No dedupe on `/panels`, `/dashboards`, `/flows`, `/operations`** — GET-filter by name before POSTing. Build op chains tail-first, then PATCH `flow.operation` to the first op's id.
-- **Never PATCH `/relations` — recreate instead.** To change relation behavior post-creation, fix at DB level via `likha_sql` + `POST /utils/cache/clear {"cache":"system"}`.
+- **NEVER PATCH `/relations` — it crashes the server.** Any `PATCH /relations/{collection}/{field}` exits the process mid-request; nodemon does NOT auto-restart (type `rs` + Enter; docker → `docker compose restart`). `POST /relations` is safe. To change relation behavior post-creation, fix at DB level via `likha_sql` + `POST /utils/cache/clear {"cache":"system"}` — or recreate the relation.
 - **Shell `$` expansion corrupts options** — `python -c "... $trigger ..."` inside double quotes silently strips `$trigger`/`$last`/`$full` → flows die silently. Always patch ops containing `$` tokens from a script file, never inline. Verify stored options after.
 - **Windows**: open HTTP-fetched JSON with `encoding='utf-8'` (cp1252 dies on smart quotes).
 

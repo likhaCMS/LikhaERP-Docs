@@ -5,6 +5,7 @@ export default defineConfig({
   title: "LikhaERP Docs",
   description: "LikhaERP Docs",
   outDir: './docs',
+  srcExclude: ['public/**/*.md'],
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],
@@ -47,7 +48,8 @@ export default defineConfig({
           { text: 'Automation Recipes', link: '/guides/automation-recipes' },
           { text: 'Dashboards & Panels', link: '/guides/dashboards-panels' },
           { text: 'Print Templates', link: '/guides/print-templates' },
-          { text: 'Public Endpoints & Portals', link: '/guides/public-endpoints' }
+          { text: 'Public Endpoints & Portals', link: '/guides/public-endpoints' },
+          { text: 'AI Agent Skill', link: '/guides/agent-skill' }
         ]
       },
       { text: 'Guide', link: '/README' }
@@ -139,7 +141,8 @@ export default defineConfig({
           { text: 'Automation Recipes', link: '/guides/automation-recipes' },
           { text: 'Dashboards & Panels', link: '/guides/dashboards-panels' },
           { text: 'Print Templates', link: '/guides/print-templates' },
-          { text: 'Public Endpoints & Portals', link: '/guides/public-endpoints' }
+          { text: 'Public Endpoints & Portals', link: '/guides/public-endpoints' },
+          { text: 'AI Agent Skill', link: '/guides/agent-skill' }
         ]
       }
     ],

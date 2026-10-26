@@ -38,6 +38,9 @@ features:
   - title: "Platform Guides"
     details: "Battle-tested recipes: data modeling, multi-tenancy, automation, dashboards, print templates, and public endpoints."
     link: /guides/
+  - title: "AI Agent Skill"
+    details: "A native SKILL.md that gives AI coding agents deep knowledge of the platform — API conventions, recipes, and pitfalls."
+    link: /guides/agent-skill
 ---
 
 

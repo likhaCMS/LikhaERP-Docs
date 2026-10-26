@@ -11,6 +11,7 @@ Practical, battle-tested recipes for building applications on the Likha ERP plat
 - [Dashboards & Panels](/guides/dashboards-panels) — metric, chart, heatmap, and custom panel types with their exact option shapes.
 - [Print Templates](/guides/print-templates) — printable documents with Liquid templates, letterheads, and QR codes.
 - [Public Endpoints & Portals](/guides/public-endpoints) — public webhook flows, customer-facing tracking pages, and verification links.
+- [AI Agent Skill](/guides/agent-skill) — a native SKILL.md that teaches AI coding agents the platform's API conventions and recipes.
 
 ## Conventions Used in These Guides
 

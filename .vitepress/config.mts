@@ -38,6 +38,18 @@ export default defineConfig({
           { text: 'Query Parameters', link: '/query-parameters' }
         ]
       },
+      {
+        text: 'Guides',
+        items: [
+          { text: 'API Notes & Best Practices', link: '/guides/api-notes' },
+          { text: 'Data Modeling Recipes', link: '/guides/data-modeling' },
+          { text: 'Permissions & Multi-Tenancy', link: '/guides/permissions-tenancy' },
+          { text: 'Automation Recipes', link: '/guides/automation-recipes' },
+          { text: 'Dashboards & Panels', link: '/guides/dashboards-panels' },
+          { text: 'Print Templates', link: '/guides/print-templates' },
+          { text: 'Public Endpoints & Portals', link: '/guides/public-endpoints' }
+        ]
+      },
       { text: 'Guide', link: '/README' }
     ],
 
@@ -115,6 +127,19 @@ export default defineConfig({
           { text: 'Actions', link: '/realtime/actions' },
           { text: 'Authentication', link: '/realtime/authentication' },
           { text: 'Custom WebSocket Handlers', link: '/realtime/custom-websocket-handlers' }
+        ]
+      },
+      {
+        text: 'Guides',
+        items: [
+          { text: 'Overview', link: '/guides/' },
+          { text: 'API Notes & Best Practices', link: '/guides/api-notes' },
+          { text: 'Data Modeling Recipes', link: '/guides/data-modeling' },
+          { text: 'Permissions & Multi-Tenancy', link: '/guides/permissions-tenancy' },
+          { text: 'Automation Recipes', link: '/guides/automation-recipes' },
+          { text: 'Dashboards & Panels', link: '/guides/dashboards-panels' },
+          { text: 'Print Templates', link: '/guides/print-templates' },
+          { text: 'Public Endpoints & Portals', link: '/guides/public-endpoints' }
         ]
       }
     ],

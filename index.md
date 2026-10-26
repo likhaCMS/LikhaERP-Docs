@@ -35,6 +35,9 @@ features:
   - title: "Realtime Updates"
     details: "Build live, interactive applications with WebSocket connections and subscriptions."
     link: /realtime-quickstart
+  - title: "Platform Guides"
+    details: "Battle-tested recipes: data modeling, multi-tenancy, automation, dashboards, print templates, and public endpoints."
+    link: /guides/
 ---
 
 

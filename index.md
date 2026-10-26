@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: Authentication Guide
       link: /auth-quickstart
+    - theme: alt
+      text: AI Agent Skill
+      link: /guides/agent-skill
 
 features:
   - title: "Quick Start Guides"
